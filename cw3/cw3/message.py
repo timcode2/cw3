@@ -2,6 +2,11 @@ from cw3.cw3 import hidden_number
 from cw3.cw3 import format_date
 
 def get_message(operation):
+    '''
+    Функция создаст структуру выводящего сообщения
+    :param operation: Работаем со словарём файла operations.json
+    :return: Готовое сообщение с данными
+    '''
     date = format_date.format_date(operation['date'])
     description = operation['description']
     if 'from' not in operation.keys():
