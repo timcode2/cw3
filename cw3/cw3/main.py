@@ -1,6 +1,6 @@
-from cw3.cw3 import opendata
-from cw3.cw3 import executed_operations
-from cw3.cw3 import message
+from cw3 import opendata
+from cw3 import executed_operations
+from cw3 import message
 
 
 data_list = opendata.get_input_data('../operations.json')

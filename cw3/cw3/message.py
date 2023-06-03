@@ -1,5 +1,5 @@
-from cw3.cw3 import hidden_number
-from cw3.cw3 import format_date
+from cw3 import hidden_number
+from cw3 import format_date
 
 def get_message(operation):
     '''

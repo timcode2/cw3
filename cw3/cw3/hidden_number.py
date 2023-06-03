@@ -28,14 +28,18 @@ def format_to_account(input_to_account):
     """
     to_account_split = input_to_account.split(" ")
     if len(to_account_split) == 2:
-        if to_account_split[-1] == 20:
+        if len(to_account_split[-1]) == 16:
+            new_str = ' **' + to_account_split[-1][12:16]
+        elif len(to_account_split[-1]) == 20:
             new_str = ' **' + to_account_split[-1][16:20]
         else:
-            new_str = ' **' + to_account_split[-1][12:16]
+            return "Invalid bank account to"
         return to_account_split[0] + new_str
-    elif len(to_account_split) == 3:
-        if to_account_split[-1] == 20:
+    if len(to_account_split) == 3:
+        if len(to_account_split[-1]) == 16:
+            new_str = ' **' + to_account_split[-1][12:16]
+        elif len(to_account_split[-1]) == 20:
             new_str = ' **' + to_account_split[-1][16:20]
         else:
-            new_str = ' **' + to_account_split[-1][12:16]
-        return to_account_split[0] + ' ' + to_account_split[1] + new_str
+            return "Invalid bank account to"
+        return to_account_split[0] + " " + to_account_split[1] + new_str
